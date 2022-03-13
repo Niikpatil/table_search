@@ -6,12 +6,12 @@ import UserTable from "./components/UserTable";
 
 function App() {
   return (
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-5">
+    <div className="container">
+      <div className="row justify-content-between">
+        <div className="col-5">
           <UserTable />
         </div>
-        <div class="col-5">
+        <div className="col-5">
           <UserDetail />
         </div>
       </div>
