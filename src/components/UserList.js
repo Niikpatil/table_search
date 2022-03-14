@@ -1,22 +1,6 @@
-import React, { useState } from "react";
-// import UserDetail from "./UserDetail";
+import React from "react";
 
-const UserList = ({ item: { userId, title, completed, id } }) => {
-  const [idClick, setIdClick] = useState({});
-
-  const url = `https://jsonplaceholder.typicode.com/users/${id}`;
-
-  const handleClick = () => {
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setIdClick(data);
-        console.log(data);
-      });
-  };
-
+const UserList = ({ item: { userId, title, completed, id }, onFetch }) => {
   return (
     <tr>
       <td>{userId}</td>
@@ -26,7 +10,7 @@ const UserList = ({ item: { userId, title, completed, id } }) => {
         <button
           type="button"
           className="btn btn-sm btn-warning"
-          onClick={() => handleClick(id)}
+          onClick={() => onFetch(id)}
         >
           View
         </button>
