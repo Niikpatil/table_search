@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import UserList from "./UserList";
+import UserList from "./DataList/UserList";
 import UserDetail from "./UserDetail";
 
 const UserTable = () => {
@@ -15,8 +15,8 @@ const UserTable = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const fetchData = (id) => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+  const fetchData = (idClick) => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${idClick}`)
       .then((response) => response.json())
       .then((data) => {
         setIdClick(data);
@@ -48,8 +48,19 @@ const UserTable = () => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-between">
-        <div className="col-5">
-          <input type="text" onChange={(e) => setSearchText(e.target.value)} />
+        <div className="col-4">
+          <div className="row">
+            <label className="col-4 col-form-label">
+              <b>Todos</b>
+            </label>
+            <div className="col-6">
+              <input
+                type="text"
+                onChange={(e) => setSearchText(e.target.value)}
+              />
+            </div>
+          </div>
+
           <table className="table">
             <thead>
               <tr>
@@ -62,10 +73,8 @@ const UserTable = () => {
             <tbody>{DataList}</tbody>
           </table>
         </div>
-        <div className="col-5">
-          <UserDetail
-          //  fetchInfo={fetchData}
-          />
+        <div className="col-6">
+          <UserDetail idClick={idClick} data={data} />
         </div>
       </div>
     </div>
