@@ -6,40 +6,46 @@ import UserDetail from "./UserDetail";
 const UserTable = () => {
   const [data, setData] = useState([]);
   const [idClick, setIdClick] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     axios
       .get(`https://jsonplaceholder.typicode.com/todos`)
-      .then((res) => {
-        // console.log(res);
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
   const fetchData = (id) => {
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         setIdClick(data);
         console.log(data);
       });
   };
 
-  const DataList = data.map((item) => (
-    <UserList key={item.id} item={item} onFetch={fetchData} />
-  ));
-
-  // const UDL = idClick.find((uds) => <UserDetail uds={uds} />);
+  const DataList = data
+    .filter((search_data) => {
+      if (searchText === "") {
+        return search_data;
+      } else if (search_data.title.includes(searchText.toLowerCase())) {
+        return search_data;
+      }
+    })
+    .map((item) => (
+      <UserList
+        key={item.id}
+        item={item}
+        searchText={searchText}
+        onFetch={fetchData}
+      />
+    ));
 
   return (
     <div className="container mt-5">
       <div className="row justify-content-between">
         <div className="col-5">
+          <input type="text" onChange={(e) => setSearchText(e.target.value)} />
           <table className="table">
             <thead>
               <tr>
@@ -53,7 +59,9 @@ const UserTable = () => {
           </table>
         </div>
         <div className="col-5">
-          <UserDetail fetchInfo={fetchData} />
+          <UserDetail
+          //  fetchInfo={fetchData}
+          />
         </div>
       </div>
     </div>
