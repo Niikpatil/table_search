@@ -28,10 +28,14 @@ const UserTable = () => {
     .filter((search_data) => {
       if (searchText === "") {
         return search_data;
-      } else if (search_data.title.includes(searchText.toLowerCase())) {
+      } else if (
+        search_data.title.includes(searchText.toLowerCase()) ||
+        search_data.id.toString().indexOf(searchText.toLowerCase()) > -1
+      ) {
         return search_data;
       }
     })
+    .slice(0, 3)
     .map((item) => (
       <UserList
         key={item.id}
@@ -49,7 +53,7 @@ const UserTable = () => {
           <table className="table">
             <thead>
               <tr>
-                <th>Todo_ID</th>
+                <th>ToDo_ID</th>
                 <th>Title</th>
                 <th>Status</th>
                 <th>Action</th>

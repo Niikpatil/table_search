@@ -1,9 +1,9 @@
 import React from "react";
 
-const UserList = ({ item: { userId, title, completed, id }, onFetch }) => {
+const UserList = ({ item: { title, completed, id }, onFetch }) => {
   return (
     <tr>
-      <td>{userId}</td>
+      <td>{id}</td>
       <td>{title}</td>
       <td>{completed === true ? "Complete" : "Incomplete"}</td>
       <td>
