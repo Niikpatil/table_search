@@ -35,7 +35,7 @@ const UserTable = () => {
         return search_data;
       }
     })
-    .slice(0, 3)
+    .slice(0, 5)
     .map((item) => (
       <UserList
         key={item.id}
