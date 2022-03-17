@@ -1,4 +1,4 @@
-<h1 align="center">E-Store</h1>
+<h1 align="center">Table Search</h1>
 
 ## Build With
 
