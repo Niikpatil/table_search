@@ -13,9 +13,9 @@
 
 ## Project Description
 
-![screen shot](https://github.com/Niikpatil/coding_challenge/blob/master/public/project_images/ic1.png)
+![screen shot](https://github.com/Niikpatil/coding_challenge/blob/master/public/project_images/c1.png)
 
-![screen shot](https://github.com/Niikpatil/coding_challenge/blob/master/public/project_images/ic1.png)
+![screen shot](https://github.com/Niikpatil/coding_challenge/blob/master/public/project_images/c2.png)
 
 ### Run this web application on your device.
 
