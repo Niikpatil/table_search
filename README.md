@@ -7,13 +7,12 @@
 - Hooks
 - Axios
 
-<!-- ### Project Link
 
 ### Project Link
 
 - [Netlify](https://table-searchf6.netlify.app/)
 - [Github Pages](https://github.com/Niikpatil/table_search)
- -->
+ 
 
 ## Project Description
 
