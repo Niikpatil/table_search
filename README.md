@@ -9,13 +9,17 @@
 
 <!-- ### Project Link
 
-- [Github Pages](https://niikpatil.github.io/e_store/) -->
+### Project Link
+
+- [Netlify](https://table-searchf6.netlify.app/)
+- [Github Pages](https://github.com/Niikpatil/table_search)
+ -->
 
 ## Project Description
 
-![screen shot](https://github.com/Niikpatil/coding_challenge/blob/master/public/project_images/c1.png)
+![screen shot](https://github.com/Niikpatil/table_search/blob/master/public/project_images/c1.png)
 
-![screen shot](https://github.com/Niikpatil/coding_challenge/blob/master/public/project_images/c2.png)
+![screen shot](https://github.com/Niikpatil/table_search/blob/master/public/project_images/c2.png)
 
 ### Run this web application on your device.
 
