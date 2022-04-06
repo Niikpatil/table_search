@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserList = ({ item: { title, completed, id }, onFetch }) => {
+const UserList = ({ item: { title, completed, id, userId}, onFetch }) => {
   return (
     <tr>
       <td>{id}</td>
@@ -10,7 +10,7 @@ const UserList = ({ item: { title, completed, id }, onFetch }) => {
         <button
           type="button"
           className="btn btn-sm btn-warning"
-          onClick={() => onFetch(id)}
+          onClick={() => onFetch(userId)}
         >
           View
         </button>
