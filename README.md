@@ -10,8 +10,7 @@
 
 ### Project Link
 
-- [Netlify](https://table-searchf6.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/047db5b0-1866-43ab-a45f-88d39b093876/deploy-status)](https://app.netlify.com/sites/table-searchf6/deploys)
- 
+- [Netlify](https://table-searchf6.netlify.app/)
 
 ## Project Description
 
